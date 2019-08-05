@@ -26,5 +26,4 @@ public class SecondActivity extends AppCompatActivity {
         });
     }
 }
-/*}Android Banking Application.
-        Create a two XML File with constraint layout.*/
+
