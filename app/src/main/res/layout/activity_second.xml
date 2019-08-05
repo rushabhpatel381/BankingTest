@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".SecondActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/leftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0" />
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_back_black"
+        app:layout_constraintLeft_toLeftOf="@+id/leftGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_24"
+        android:layout_marginLeft="@dimen/margin_left_24"
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:text="@string/add_bank_account"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="@+id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_16"
+        android:layout_marginLeft="@dimen/margin_left_16"
+        android:layout_marginTop="@dimen/margin_top_24"
+        android:layout_marginEnd="@dimen/margin_end_16"
+        android:layout_marginRight="@dimen/margin_right_16"
+        android:background="@drawable/white_bg"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_bottom_24"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+
+        <TextView
+            android:id="@+id/band_detail_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_left_16"
+            android:paddingTop="@dimen/padding_top_24"
+            android:paddingRight="@dimen/padding_right_16"
+            android:text="@string/enter_your_bank_account_details"
+            android:textColor="@color/black" />
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_16"
+            android:layout_marginTop="@dimen/margin_top_20"
+            android:layout_marginRight="@dimen/margin_right_16"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineProvider="paddedBounds"
+            android:textColorHint="@color/sky"
+            android:theme="@style/LoginTextInputLayoutStyle"
+            app:boxStrokeColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/band_detail_txt">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_15"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_16"
+            android:layout_marginTop="@dimen/margin_top_20"
+            android:layout_marginRight="@dimen/margin_right_16"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineProvider="paddedBounds"
+            android:textColorHint="@color/sky"
+            android:theme="@style/LoginTextInputLayoutStyle"
+            app:boxStrokeColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/band_detail_txt">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/account_number"
+                android:inputType="number"
+                android:padding="@dimen/padding_15"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_16"
+            android:layout_marginTop="@dimen/margin_top_20"
+            android:layout_marginRight="@dimen/margin_right_16"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineProvider="paddedBounds"
+            android:textColorHint="@color/sky"
+            android:theme="@style/LoginTextInputLayoutStyle"
+            app:boxStrokeColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/band_detail_txt">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/account_holders_name"
+                android:inputType="number"
+                android:padding="@dimen/padding_15"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_selectPlan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_16"
+        android:layout_marginLeft="@dimen/margin_left_16"
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:layout_marginEnd="@dimen/margin_end_16"
+        android:layout_marginRight="@dimen/margin_right_16"
+        android:background="@drawable/red_bg"
+        android:text="SELECT PLAN"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/linear" />
+
+
+</android.support.constraint.ConstraintLayout>

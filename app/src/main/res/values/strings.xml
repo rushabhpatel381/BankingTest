@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Banking</string>
+    <string name="add_bank_account">Add Bank Account</string>
+    <string name="enter_your_bank_account_details">Enter Your Bank Account Details</string>
+    <string name="email">email</string>
+    <string name="account_number">Account Number</string>
+    <string name="account_holders_name">Account Holders Name</string>
+</resources>
