@@ -12,18 +12,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0" />
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/rightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
 
 
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/margin_top_20"
         android:src="@drawable/ic_back_black"
-        app:layout_constraintLeft_toLeftOf="@+id/leftGuideline"
+        app:layout_constraintLeft_toRightOf="@+id/leftGuideline"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -31,8 +36,6 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_start_24"
-        android:layout_marginLeft="@dimen/margin_left_24"
         android:layout_marginTop="@dimen/margin_top_20"
         android:text="@string/add_bank_account"
         android:textSize="28sp"
@@ -42,16 +45,14 @@
 
     <LinearLayout
         android:id="@+id/linear"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_start_16"
-        android:layout_marginLeft="@dimen/margin_left_16"
         android:layout_marginTop="@dimen/margin_top_24"
-        android:layout_marginEnd="@dimen/margin_end_16"
-        android:layout_marginRight="@dimen/margin_right_16"
         android:background="@drawable/white_bg"
         android:orientation="vertical"
         android:paddingBottom="@dimen/padding_bottom_24"
+        app:layout_constraintLeft_toLeftOf="@+id/leftGuideline"
+        app:layout_constraintRight_toRightOf="@+id/rightGuideline"
         app:layout_constraintTop_toBottomOf="@+id/title">
 
 
@@ -144,16 +145,14 @@
 
     <Button
         android:id="@+id/btn_selectPlan"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_start_16"
-        android:layout_marginLeft="@dimen/margin_left_16"
         android:layout_marginTop="@dimen/margin_top_20"
-        android:layout_marginEnd="@dimen/margin_end_16"
-        android:layout_marginRight="@dimen/margin_right_16"
         android:background="@drawable/red_bg"
         android:text="SELECT PLAN"
         android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@+id/leftGuideline"
+        app:layout_constraintRight_toRightOf="@+id/rightGuideline"
         app:layout_constraintTop_toBottomOf="@+id/linear" />
 
 
